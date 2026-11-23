@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CUIMS Automation Test Suite" parallel="false">
+    
+    <!-- TestNG Listener for ExtentReports HTML reporting and failure screenshots -->
+    <listeners>
+        <listener class-name="com.cuims.listeners.ExtentReportListener"/>
+    </listeners>
+
+    <!-- Global Browser Parameter (chrome, edge, firefox) -->
+    <parameter name="browser" value="chrome"/>
+
+    <test name="CUIMS Portal Smoke &amp; Functional Tests">
+        <classes>
+            <class name="com.cuims.tests.NavigationSmokeTest"/>
+            <class name="com.cuims.tests.LoginTest"/>
+            <class name="com.cuims.tests.AttendanceTest"/>
+        </classes>
+    </test>
+    
+</suite>
